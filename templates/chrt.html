@@ -1,0 +1,45 @@
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>ChartJS</title>
+  <meta name="description" content="The HTML5 Herald">
+  <meta name="author" content="SitePoint">
+
+  <link rel="stylesheet" href="css/styles.css?v=1.0">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+
+<body>
+  <canvas id="bar-chart" height="100%"></canvas>
+  <script src="js/scripts.js"></script>
+</body>
+<script>
+// Bar chart
+new Chart(document.getElementById("bar-chart"), {
+    type: 'bar',
+    data: {
+      labels: ["Africa", "Asia", "Europe", "Latin America", "North America"],
+      datasets: [
+        {
+          label: "Population (millions)",
+          backgroundColor: ["#3e95cd", "#8e5ea2","#3cba9f","#e8c3b9","#c45850"],
+          data: [2478,5267,734,784,433]
+        }
+      ]
+    },
+    options: {
+      legend: { display: false },
+      title: {
+        display: true,
+        text: 'Predicted world population (millions) in 2050'
+      }
+    }
+});
+
+
+
+</script>
+</html
